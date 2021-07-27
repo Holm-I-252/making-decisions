@@ -7,6 +7,15 @@
 */
 
 //CODE HERE
+console.log("test")
+
+let lovesCode = true
+
+if (lovesCode = true) {
+  console.log("I love to code!")
+} else {
+  console.log("Coding has it's challanges.")
+}
 
 // For problems 2-3 use the following lines of code:
 var amysAge = 29
@@ -22,6 +31,13 @@ var brittanisBirthYear = 1986
 
 //CODE HERE
 
+if (brittanisAge > amysAge) {
+  console.log("Brittani is older")
+} else if (amysAge > brittanisAge) {
+  console.log("Amy is older")
+} else {
+  console.log("They are the same age")
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -31,7 +47,11 @@ var brittanisBirthYear = 1986
 
 //CODE HERE
 
-
+if (brittanisBirthYear === amysBirthYear) {
+  console.log("Amy & Brittani were born in the same year")
+} else {
+  console.log("Amy & Brittani were not born in the same year")
+}
 
 // For problems 4-5 use the following lines of code:
 var arr = [10,20,30,40,50,60]
@@ -43,6 +63,7 @@ var arr = [10,20,30,40,50,60]
 
 //Code Here
 
+let firstItem = arr[0]
 
 ////////// PROBLEM 5 //////////
 /*
@@ -50,6 +71,8 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
+
+let lastItemRemoved = arr.pop()
 
 ////////// PROBLEM 6 //////////
 
@@ -63,6 +86,9 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 
 //Code Here
 
+for (let i = 0; i < family.length; i++) {
+  console.log(family[i])
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -78,7 +104,11 @@ let evensArr = []
 
 //Code Here
 
-
+for (let i = 0; i < nums.length; i++){
+  if (nums[i] % 2 === 0){
+    evensArr += nums.slice(i, i + 1)
+  }
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -92,6 +122,17 @@ var score = 74
 
 //Code Here
 
+if (score >= 90) {
+  console.log("A")
+} else if (score >= 80 && score < 90) {
+  console.log("B")
+} else if (score >= 70 && score < 80) {
+  console.log("C")
+} else if (score >= 60 && score < 70) {
+  console.log("D")
+} else {
+  console.log("F")
+}
 
 ////////// Intermediate Problems //////////
 
@@ -104,12 +145,25 @@ var score = 74
 
 //CODE HERE
 
+let changeMyMind = true
+
+if (changeMyMind === true) {
+  changeMyMind = false;
+} else if (changeMyMind === false) {
+  changeMyMind = true
+}
 
 // Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
 
 //CODE HERE
 
+changeMyMind = false
 
+if (changeMyMind !== true) {
+  changeMyMind = true;
+} else if (changeMyMind !== false) {
+  changeMyMind = false
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -124,13 +178,18 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 
 //Code Here
 
-
+var someNum = myFavoriteNumbers[4]
 
 // Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
 
+if (myFavoriteNumbers.length < 7) {
+  console.log("There are not enough numbers in this array")
+} else if(myFavoriteNumbers.length > 7) {
+  someNum = myFavoriteNumbers[6]
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -142,6 +201,11 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 //Code Here
 
+for (let i = 0; i < listOfNumbers.length; i++) {
+  if (listOfNumbers[i] % 3 === 0) {
+    console.log(`${listOfNumbers[i]} is divisible by three`)
+  }
+}
 
 ////////// PROBLEM 12 //////////
 // Do not edit the code below.
@@ -154,6 +218,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 //Code Here
 
+for (i = letters.length; i >= 0; i--) {
+  console.log(letters[i])
+}
 
 ////////// Advanced Problems //////////
 
@@ -176,7 +243,24 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 
 //Code Here
 
+switch (letterGrade) {
+  case "A":
+    console.log("The student is doing excellently.")
+    break;
+    case "B":
+    console.log("The student is doing well.")
+    break;
+    case "C":
+    console.log("The student is doing alright.")
+    break;
+    case "D":
+    console.log("The student is not doing very well.")
+    break;
+    case "F":
+    console.log("The student is failing.")
+    break;
 
+}
 
 ////////// PROBLEM 14 //////////
 /* The famous FizzBuzz, Devmountain style!
@@ -203,3 +287,14 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+for (let i = 1; i <= 100; i++) {
+
+  if (i % 3 === 0){
+    console.log("Dev")
+  }
+  else if (i % 5 === 0) {
+    console.log('Mountain')
+  } else {
+    console.log(i)
+  }
+}
